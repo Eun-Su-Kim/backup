@@ -1,5 +1,12 @@
 #include <iostream>
+#include <exception>
 #include "Bvector.h"
+class IncompatibleException : public std::exception{
+    public:
+        int num1, num2;
+        IncompatibleException(int n1, int n2): num1(n1), num2(n2) {};
+};
+
 class BitSet : public Bvector{
     public:
         BitSet(int sz=32);
