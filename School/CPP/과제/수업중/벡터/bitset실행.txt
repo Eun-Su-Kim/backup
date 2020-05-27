@@ -1,0 +1,2 @@
+g++ -g -c BitSet.cpp
+g++ -g -o BitSet BitSet.o Bvector.o Kvector.o
