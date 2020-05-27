@@ -1,0 +1,12 @@
+var mili = 24*60*60*1000;
+var now = new Date();
+var birth = new Date(1999, 7, 5);
+var hundmili = new Date(1999, 7, 5);
+hundmili.setDate(hundmili.getDate()+100);
+var sub = now.getTime() - birth.getTime();
+var passedDay = parseInt(sub/mili);
+birth.setDate(birth.getDate() + passedDay);
+document.querySelector("#daypass1").innerText = passedDay + "일";
+document.querySelector("#day100").innerText = hundmili.getFullYear() + "년 " + (hundmili.getMonth() + 1) + "월 " + hundmili.getDate() + "일";
+document.querySelector("#daypass2").innerText = passedDay + "일후";
+document.querySelector("#dayto").innerText = birth.getFullYear() + "년 " + (birth.getMonth() + 1) + "월 "+ birth.getDate() + "일";

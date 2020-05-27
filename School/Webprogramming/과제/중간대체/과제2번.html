@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2번 문제</title>
+    <script>
+        var num = [];
+        var idx = 0;
+        while (idx<5) {
+            var ret = prompt("정수입력");
+            if (ret == null || isNaN(ret) || ret == "") {
+                continue;
+            }
+            num[idx] = ret;
+            idx++;
+        }
+    </script>
+</head>
+<body>
+    <h3>정수 5개 입력받아 역순으로 출력</h3>
+    <hr>
+    <p>입력된 수의 배열</p>
+    <p id = "list"></p>
+    <hr>
+    <p>역순으로 재정렬된 배열</p>
+    <p id = "relist"></p>
+    <script>
+        var pr = num.join(" ")
+        document.querySelector('#list').innerHTML = pr;
+        pr = num.reverse().join(" ");
+        document.querySelector('#relist').innerHTML = pr;
+    </script>
+</body>
+</html>
