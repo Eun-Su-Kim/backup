@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제 2</title>
+    <link rel="stylesheet" href="2번.css">
+    <script src = "2번.js"></script>
+</head>
+<body>
+    <div id = "pizza">
+        <h1>피자 주문</h1>
+        <form name="order">
+            <fieldset>
+                <legend>사이즈</legend>
+                <p>Large - 24000원</p>
+            </fieldset>
+            <fieldset>
+                <legend>추가 주문</legend>
+                <input type = "checkbox" name = "add" value = "800" onclick="resultsum()" >피클(800원)
+                <input type = "checkbox" name = "add" value = "300" onclick="resultsum()">칠리 소스(300원)
+                <input type = "checkbox" name = "add" value = "200" onclick="resultsum()">디핑 소스(200원)
+                <input type = "checkbox" name = "add" value = "4800" onclick="resultsum()">치즈스틱(4개, 4800원)
+                <input type = "checkbox" name = "add" value = "2400" onclick="resultsum()">콘 샐러드(2400원)
+            </fieldset>
+            <fieldset>
+                <legend>합계</legend>
+                <p id = "result">24000원</p>
+            </fieldset>
+        </form>
+
+    </div>
+</body>
+</html>
