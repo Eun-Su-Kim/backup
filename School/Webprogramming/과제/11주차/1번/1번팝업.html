@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>현재 시각은?</title>
+    <script>
+        function nowTime() {
+            var now = new Date();
+            var printtime = document.getElementById("time");
+            printtime.innerHTML = now.toLocaleTimeString();
+        }
+        playonesec = setInterval(function () {nowTime()}, 1000);
+    </script>
+    <style>
+        #time {
+            color : blue;
+            font-size : 25pt;
+            font-weight : bold;
+        }
+    </style>
+</head>
+<body onload = "nowTime()">
+    <div id = "time"></div>
+</body>
+</html> 
