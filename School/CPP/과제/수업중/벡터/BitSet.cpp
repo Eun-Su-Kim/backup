@@ -16,13 +16,13 @@ BitSet operator+(const BitSet& v1, const BitSet& v2) {
 }
 
 ostream& operator<<(ostream& os, const BitSet& b) {
-    cout << "{ ";
+    os << "{ ";
     for (int i = 0; i < b.NBITS; i++) {
         if (b[i]) {
-            cout << i << " ";
+            os << i << " ";
         }
     }
-    cout << "}";
+    os << "}";
     return os;
 }
 
