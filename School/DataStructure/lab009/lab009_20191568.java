@@ -1,6 +1,6 @@
 // Lab 009	: Heapsort
-// Name :
-// Student ID :
+// Name : Kim Eun Su
+// Student ID : 20191568
 
 import java.util.*;
 
@@ -42,6 +42,30 @@ class HeapSort {
 		//	NEED TO IMPLEMENT
 
 		int e = heapArr[root];
+		while (root * 2 <= hSize) {
+			if (root * 2 + 1 > hSize) {
+				if (e > heapArr[root * 2]) {
+					int tmp = heapArr[root * 2];
+					heapArr[root * 2] = e;
+					heapArr[root] = tmp;
+					root *= 2;
+				}
+			} else if (e > heapArr[root * 2] || e > heapArr[root * 2 + 1]) {
+				if (heapArr[root * 2] < heapArr[root * 2 + 1]) {
+					int tmp = heapArr[root * 2];
+					heapArr[root * 2] = e;
+					heapArr[root] = tmp;
+					root *= 2;
+				} else {
+					int tmp = heapArr[root * 2 + 1];
+					heapArr[root * 2 + 1] = e;
+					heapArr[root] = tmp;
+					root = root * 2 + 1;
+				}
+			} else {
+				break;
+			}
+		}
 
 
 	}
@@ -49,7 +73,9 @@ class HeapSort {
 	void  Heapify() {	
 		// reorder heapArr[1:n] into a heap
 		//	NEED TO IMPLEMENT
-
+		for (int i = hSize/2; i >= 1; i--) {
+			Adjust(i, hSize);
+		}
 
 	}
 }
