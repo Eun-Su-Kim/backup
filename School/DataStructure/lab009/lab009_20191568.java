@@ -42,6 +42,7 @@ class HeapSort {
 		//	NEED TO IMPLEMENT
 
 		int e = heapArr[root];
+		
 		while (root * 2 <= hSize) {
 			if (root * 2 + 1 > hSize) {
 				if (e > heapArr[root * 2]) {
