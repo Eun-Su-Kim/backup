@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제풀이</title>
+    <script>
+        function changeImg(x) {
+            document.querySelector("#iii").src = x.value + ".jpg";
+        }
+    </script>
+</head>
+<body>
+    <h3>라디오 버튼을 클릭하면 이미지를 출력합니다.</h3>
+    <hr>
+    <form>
+        <input type="radio" name = "img" value = "spring" onclick ="changeImg(this)"> 봄
+        <input type="radio" name = "img" value = "summer" onclick ="changeImg(this)" checked> 여름
+        <input type="radio" name = "img" value = "fall" onclick ="changeImg(this)"> 가을
+        <input type="radio" name = "img" value = "winter" onclick ="changeImg(this)"> 겨울
+    </form>
+    <img src="summer.jpg" id = "iii">
+</body>
+</html>
