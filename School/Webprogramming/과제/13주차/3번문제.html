@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3번 문제</title>
+    <script>
+        function cal(event) {
+            if (event.keyCode == 13) {
+                var exp = document.getElementById("exp");
+                var re = document.getElementById("result");
+                var result = eval(exp.value);
+                re.value = result;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>계산기 만들기</h1>
+    <hr>
+    <h3>수식을 입력하고 &lt;Enter&gt;를 입력하세요.</h3>
+    <br>
+    <form>
+        식<input type="text" id="exp" value="" onkeydown="cal(event);"><br>
+        값<input type="text" id="result" value="">
+    </form>
+</body>
+</html>

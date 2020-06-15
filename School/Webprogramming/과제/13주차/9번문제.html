@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9번 문제</title>
+    <style>
+        div {
+            position : absolute;
+            visibility: hidden;
+            width : auto;
+            height : auto;
+            background-color : blueviolet;
+            color : white;
+        }
+    </style>
+    <script>
+        var dv;
+        var info = [
+            "자전거는 힘들어",
+            "책은 좋은 것",
+            "체력이 좋아야지",
+            "공부를 해야지"
+        ];
+        function start() {
+            dv = document.getElementById("tmi");
+            var k = document.getElementsByTagName("li") 
+            for (var i = 0; i < k.length; i++) {
+                k[i].onmouseover = on;
+                k[i].onmouseout = off;
+            }
+        }
+        function on(e) {
+            var i = e.target.id;
+            dv.innerHTML = info[i];
+            dv.style.visibility = "visible";
+            dv.style.left = e.x + "px";
+            dv.style.top = e.y + "px";
+            dv.style.right = auto;
+        }
+        function off(e) {
+            dv.style.visibility = "hidden";
+        }
+    </script>
+</head>
+<body onload = "start()">
+    <h3>아이템에 마우스를 올리면 설명 출력</h3>
+    <hr>
+    여름 방학 때 하고 싶은 것들
+    <ul>
+        <li id="0">자전거로 대한민국 일주</li>
+        <li id="1">책 100권 읽기</li>
+        <li id="2">철인 3종 경기 준비</li>
+        <li id="3"> 자바스크립트 정복</li>
+    </ul>
+
+    <div id = "tmi"></div>
+</body>
+</html>
