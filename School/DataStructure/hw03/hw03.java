@@ -1,6 +1,6 @@
 // HW 203, QuickSort
-// Name :
-// Student ID :
+// Name : Kim Eun Su
+// Student ID : 20191568
 
 import java.util.*;
 
@@ -63,7 +63,49 @@ class QuickSort {
 
 
 		//	"NEED TO IMPLEMENT" 
-	
+		int l = s;
+		int r = e;
+		int m = (s + e) / 2;
+		int p;
+		int tmp;
+		
+		if (((arr[s] >= arr[r]) && (arr[s] <= arr[m])) || ((arr[s] >= arr[m]) && (arr[s] <= arr[r]))) {
+			p = arr[s];
+		} else if (((arr[m] >= arr[r]) && (arr[m] <= arr[l])) || ((arr[m] >= arr[l]) && (arr[m] <= arr[r]))) {
+			p = arr[m];
+			tmp = arr[m];
+			arr[m] = arr[s];
+			arr[s] = tmp;
+		} else {
+			p = arr[r];
+			tmp = arr[r];
+			arr[r] = arr[s];
+			arr[s] = tmp;
+		}
+		int it = s;
+		int lt = e + 1;
+		
+		while (it < lt) {
+			it++;
+			lt--;
+			while (arr[it] > p) {
+				it++;
+			}
+			while (arr[lt] < p) {
+				lt--;
+			}
+			if (it < lt) {
+				tmp = arr[it];
+				arr[it] = arr[lt];
+				arr[lt] = tmp;
+			}
+		}
+
+		tmp = arr[lt];
+		arr[lt] = arr[s];
+		arr[s] = tmp;
+		QSort(s, lt - 1);
+		QSort(lt + 1, e);
 
 
 
