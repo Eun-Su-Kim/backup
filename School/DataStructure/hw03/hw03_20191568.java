@@ -61,7 +61,6 @@ class QuickSort {
 		if(s >= e)
 			return;
 
-
 		//	"NEED TO IMPLEMENT" 
 		int l = s;
 		int r = e;
@@ -106,11 +105,5 @@ class QuickSort {
 		arr[s] = tmp;
 		QSort(s, lt - 1);
 		QSort(lt + 1, e);
-
-
-
 	}
-
 }
-
-
